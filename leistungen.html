@@ -22,16 +22,16 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span></span><span class="visually-hidden">Menü</span></button>
       <div class="nav-links" id="site-menu">
         <a href="index.html" data-lw-page-ref="bs-pflege-home-v1">Home</a>
-        <details>
-          <summary aria-current="page">Leistungen</summary>
-          <div>
+        <div class="nav-item nav-item--sub">
+          <a href="leistungen.html" data-lw-page-ref="bs-pflege-leistungen-v1" aria-current="page">Leistungen</a>
+          <div class="nav-sub">
             <a href="leistungen.html" data-lw-page-ref="bs-pflege-leistungen-v1">Alle Leistungen</a>
             <a href="mobile-pflege.html" data-lw-page-ref="bs-pflege-mobile-pflege-v1">Mobile Pflege und Betreuung</a>
             <a href="wohngemeinschaften.html" data-lw-page-ref="bs-pflege-wohngemeinschaften-v1">Ambulant betreute Wohngemeinschaft</a>
             <a href="kurzzeitpflege.html" data-lw-page-ref="bs-pflege-kurzzeitpflege-v1">Kurzzeitpflege oder Verhinderungspflege</a>
             <a href="pflege-zuhause.html" data-lw-page-ref="bs-pflege-pflege-zuhause-v1">24h Pflege in der eigenen Häuslichkeit</a>
           </div>
-        </details>
+        </div>
         <a href="unser-team.html" data-lw-page-ref="bs-pflege-unser-team-v1">Unser Team</a>
         <a href="stellenanzeigen.html" data-lw-page-ref="bs-pflege-stellenanzeigen-v1">Stellenanzeigen</a>
         <a href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1">Kontakt</a>
@@ -54,60 +54,139 @@
         <div class="media-frame"><img data-lw-field="mobile.image" data-lw-type="image" src="assets/cover-service-mobile.webp" alt="Mobile Pflegekraft unterstützt eine Seniorin zu Hause"></div>
         <div>
           <h2 data-lw-field="mobile.title" data-lw-type="richtext">Mobile Pflege und Betreuung</h2>
-          <p data-lw-field="mobile.intro" data-lw-type="textarea">Hilfe, Pflege und Betreuung bei Ihnen Zuhause. Das Leben verläuft oft nicht ohne Hürden und es gibt Dinge, die einem irgendwann nicht mehr so leicht von der Hand gehen. Egal, ob aufgrund von Krankheit, einem Unfall oder dem einfachen Alterungsprozess, wir unterstützen gerne bei der Bewältigung des Alltags. Wählen Sie die Leistungen, die Sie benötigen ganz individuell.</p>
-          <div class="feature-grid" style="grid-template-columns:1fr" data-lw-repeater="mobile.points">
-            <article class="feature" data-lw-item-key="behandlung"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Behandlungspflege</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Unsere Pflegekräfte übernehmen ärztlich verordnete Maßnahmen wie Medikamentengabe, Verbandswechsel oder Blutzuckerkontrollen – professionell und direkt bei Ihnen zu Hause.</p></article>
-            <article class="feature" data-lw-item-key="grund"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Grundpflege</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Wir unterstützen bei alltäglichen Aufgaben wie Körperpflege, Anziehen, Mobilität und Ernährung – einfühlsam, respektvoll und individuell auf Ihre Bedürfnisse abgestimmt.</p></article>
-            <article class="feature" data-lw-item-key="haus"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Hauswirtschaftshilfen</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Wir übernehmen Aufgaben wie Reinigung, Wäschepflege oder Einkäufe – für mehr Entlastung im Alltag und ein gepflegtes Zuhause.</p></article>
+          <div class="prose" data-lw-field="mobile.intro" data-lw-type="html">
+            <p>Hilfe, Pflege und Betreuung bei Ihnen Zuhause.</p>
+            <p>Das Leben verläuft oft nicht ohne Hürden und es gibt Dinge, die einem irgendwann nicht mehr so leicht von der Hand gehen. Egal, ob aufgrund von Krankheit, einem Unfall oder dem einfachen Alterungsprozess, wir unterstützen gerne bei der Bewältigung des Alltags.</p>
+            <p>Wählen Sie die Leistungen, die Sie benötigen ganz individuell.</p>
           </div>
-          <p><a class="button" href="mobile-pflege.html" data-lw-page-ref="bs-pflege-mobile-pflege-v1">Möchten Sie mehr erfahren?</a></p>
         </div>
       </div>
     </section>
-    <section class="section section--white" data-lw-section="wg">
+    <section class="section section--white" data-lw-section="mobile_points">
+      <div class="wrap">
+        <div class="feature-grid" data-lw-repeater="mobile.points">
+          <article class="feature" data-lw-item-key="behandlung"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Behandlungspflege</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Unsere Pflegekräfte übernehmen ärztlich verordnete Maßnahmen wie Medikamentengabe, Verbandswechsel oder Blutzuckerkontrollen – professionell und direkt bei Ihnen zu Hause.</p></article>
+          <article class="feature" data-lw-item-key="grund"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Grundpflege</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Wir unterstützen bei alltäglichen Aufgaben wie Körperpflege, Anziehen, Mobilität und Ernährung – einfühlsam, respektvoll und individuell auf Ihre Bedürfnisse abgestimmt.</p></article>
+          <article class="feature" data-lw-item-key="haus"><h3 data-lw-field="mobile.point_title" data-lw-type="text">Hauswirtschaftshilfen</h3><p data-lw-field="mobile.point_copy" data-lw-type="textarea">Wir übernehmen Aufgaben wie Reinigung, Wäschepflege oder Einkäufe – für mehr Entlastung im Alltag und ein gepflegtes Zuhause.</p></article>
+        </div>
+        <p><a class="button" href="mobile-pflege.html" data-lw-page-ref="bs-pflege-mobile-pflege-v1">Möchten Sie mehr erfahren?</a></p>
+      </div>
+    </section>
+    <section class="section section--photo section--photo-spacer" style="background-image:url('assets/cover-service-istock.webp')" data-lw-section="spacer_mobile" aria-hidden="true"></section>
+    <section class="section section--cream" data-lw-section="wg_title">
+      <div class="wrap">
+        <h2 data-lw-field="wg.title" data-lw-type="richtext">Ambulant betreute Wohngemeinschaften</h2>
+      </div>
+    </section>
+    <section class="section section--cream section--tight" data-lw-section="wg">
       <div class="wrap split split--flip">
         <div>
-          <h2 data-lw-field="wg.title" data-lw-type="richtext">Ambulant betreute Wohngemeinschaften</h2>
-          <p data-lw-field="wg.copy" data-lw-type="textarea">Niemand möchte gerne nur eine Nummer sein. Deshalb bestehen unsere ambulant betreuten Wohngemeinschaften aus einem engen Kreis mit maximal acht Bewohnern. Unsere Präsenzkräfte sind 24 Stunden vor Ort und sorgen sich um die hauswirtschaftlichen Tätigkeiten. Die Grundpflege wird durch unsere ambulanten Pflegekräfte gewährleistet. Durch die kleinen Wohngruppen können wir eine intensive Pflege unserer Bewohner bieten, bei der auch Zeit für das ein oder andere ausführliche Gespräch bleibt.</p>
+          <div class="prose" data-lw-field="wg.copy" data-lw-type="html">
+            <p>Niemand möchte gerne nur eine Nummer sein. Deshalb bestehen unsere ambulant betreuten Wohngemeinschaften aus einem engen Kreis mit maximal acht Bewohnern. Unsere Präsenzkräfte sind 24 Stunden vor Ort sorgen sich um die hauswirtschaftlichen Tätigkeiten. Die Grundpflege wird durch unsere ambulanten Pflegekräfte gewährleistet.</p>
+            <p>Durch die kleinen Wohngruppen können wir eine intensive Pflege unserer Bewohner bieten, bei der auch Zeit für das ein oder andere ausführliche Gespräch bleibt.</p>
+          </div>
+          <p><a class="button" href="wohngemeinschaften.html" data-lw-page-ref="bs-pflege-wohngemeinschaften-v1">Für Sie da – mehr erfahren</a></p>
           <ul class="checklist" data-lw-repeater="wg.items">
-            <li data-lw-item-key="presence" data-lw-field="wg.item" data-lw-type="text">24-Stunden-Betreuung durch Präsenzkräfte</li>
+            <li data-lw-item-key="presence" data-lw-field="wg.item" data-lw-type="text">24-Stunden-Betreuung und Anwesenheit von Mitarbeitern, durch Anwesenheit von Präsenzkräften</li>
             <li data-lw-item-key="activities" data-lw-field="wg.item" data-lw-type="text">Gemeinsame Aktivitäten und das Erleben des Alltags</li>
             <li data-lw-item-key="meals" data-lw-field="wg.item" data-lw-type="text">Alle Mahlzeiten werden frisch in den Wohngemeinschaften zubereitet</li>
             <li data-lw-item-key="inclusive" data-lw-field="wg.item" data-lw-type="text">Mahlzeiten und Getränke inklusive</li>
-            <li data-lw-item-key="household" data-lw-field="wg.item" data-lw-type="text">Hauswirtschaftliche Versorgung, Waschen und Bügeln</li>
-            <li data-lw-item-key="emergency" data-lw-field="wg.item" data-lw-type="text">Notruf und Pflege durch examinierte Mitarbeiter</li>
+            <li data-lw-item-key="household" data-lw-field="wg.item" data-lw-type="text">Hauswirtschaftliche Versorgung</li>
+            <li data-lw-item-key="laundry" data-lw-field="wg.item" data-lw-type="text">Waschen und bügeln der Wäsche</li>
+            <li data-lw-item-key="emergency" data-lw-field="wg.item" data-lw-type="text">Notruf</li>
+            <li data-lw-item-key="nursing" data-lw-field="wg.item" data-lw-type="text">Pflege durch examinierte Mitarbeiter</li>
+            <li data-lw-item-key="furniture" data-lw-field="wg.item" data-lw-type="text">Bei Bedarf werden Möbel und Ausstattung gestellt</li>
+            <li data-lw-item-key="rides" data-lw-field="wg.item" data-lw-type="text">Fahrten zu Ärzten und Krankenhäusern</li>
           </ul>
-          <p><a class="button" href="wohngemeinschaften.html" data-lw-page-ref="bs-pflege-wohngemeinschaften-v1">Für Sie da – mehr erfahren</a></p>
         </div>
         <div class="media-frame"><img data-lw-field="wg.image" data-lw-type="image" src="assets/cover-service-wg.webp" alt="Gemeinschaftsraum in einer betreuten Wohngemeinschaft"></div>
       </div>
     </section>
+    <section class="section section--photo section--photo-spacer" style="background-image:url('assets/cover-photo-hands.webp')" data-lw-section="spacer_wg" aria-hidden="true"></section>
     <section class="section section--cream" data-lw-section="respite">
       <div class="wrap split">
         <div class="media-frame"><img data-lw-field="respite.image" data-lw-type="image" src="assets/cover-service-respite.webp" alt="Zwei Hände halten einander, Sinnbild für Verhinderungspflege"></div>
         <div>
           <h2 data-lw-field="respite.title" data-lw-type="richtext">Kurzzeitpflege oder Verhinderungspflege</h2>
-          <p data-lw-field="respite.copy" data-lw-type="textarea">Sie kümmern sich mit Herz und Hingabe um einen geliebten Menschen. Doch was passiert, wenn Sie selbst einmal nicht können? Verhinderungspflege bedeutet: Wir springen ein, wenn Sie mal nicht können. Ob für ein paar Tage oder mehrere Wochen, wir sorgen dafür, dass Ihre Liebsten in guten Händen sind. Flexibel Zuhause oder vorübergehend in einer unserer ambulant betreuten Wohngemeinschaften.</p>
-          <a class="button" href="kurzzeitpflege.html" data-lw-page-ref="bs-pflege-kurzzeitpflege-v1">Wie wir helfen können</a>
+          <div class="prose" data-lw-field="respite.copy" data-lw-type="html">
+            <p>Sie kümmern sich mit Herz und Hingabe um einen geliebten Menschen. Doch was passiert, wenn Sie selbst einmal nicht können? Vielleicht brauchen Sie eine Auszeit, sind krank oder einfach erschöpft. Genau dann ist Verhinderungspflege für Sie da.</p>
+            <p>Verhinderungspflege bedeutet: Wir springen ein, wenn Sie mal nicht können. Ob für ein paar Tage oder mehrere Wochen, wir sorgen dafür, dass Ihre Liebsten in guten Händen sind. Und das ganz flexibel:</p>
+          </div>
+          <ul class="checklist" data-lw-repeater="respite.places">
+            <li data-lw-item-key="home" data-lw-field="respite.place" data-lw-type="text">Zuhause, unterstützt durch einen ambulanten Pflegedienst, hauswirtschaftliche Hilfe oder eine 24-Stunden-Betreuungskraft.</li>
+            <li data-lw-item-key="wg" data-lw-field="respite.place" data-lw-type="text">Oder vorübergehend in einer unserer ambulant betreuten Wohngemeinschaften, mit liebevoller Rund-um-die-Uhr-Betreuung und einem sicheren, familiären Umfeld.</li>
+          </ul>
+          <div class="prose" data-lw-field="respite.closing" data-lw-type="html">
+            <p>Diese Form der Versorgung nennen wir auch Kurzzeitpflege, Pflege auf Zeit, mit Wärme, Verständnis und einem offenen Ohr.</p>
+            <p>Gönnen Sie sich eine Pause, ohne schlechtes Gewissen. Denn wir sind für Sie da, und für die Menschen, die Ihnen am Herzen liegen.</p>
+          </div>
+          <p><a class="button" href="kurzzeitpflege.html" data-lw-page-ref="bs-pflege-kurzzeitpflege-v1">Wie wir helfen können</a></p>
+          <h3 data-lw-field="respite.assemble_title" data-lw-type="text">Stellen Sie sich ihre Leistungen individuell zusammen:</h3>
+          <ul class="checklist" data-lw-repeater="respite.items">
+            <li data-lw-item-key="care24" data-lw-field="respite.item" data-lw-type="text">24h Betreuung und Pflege</li>
+            <li data-lw-item-key="concept" data-lw-field="respite.item" data-lw-type="text">Individuelle Pflegekonzepte</li>
+            <li data-lw-item-key="advice" data-lw-field="respite.item" data-lw-type="text">Beratung über die Grund- und Behandlungspflege hinaus</li>
+            <li data-lw-item-key="finance" data-lw-field="respite.item" data-lw-type="text">Unterstützung bei Antragstellung und Finanzierung</li>
+            <li data-lw-item-key="therapy" data-lw-field="respite.item" data-lw-type="text">Vermittlungshilfe bei rehabilitativ-therapeutischen Maßnahmen oder pflegerischen Hilfsmitteln</li>
+          </ul>
         </div>
       </div>
     </section>
-    <section class="section section--white" data-lw-section="home24">
+    <section class="section section--band" data-lw-section="bridge">
+      <div class="wrap">
+        <div class="prose" data-lw-field="bridge.copy" data-lw-type="html">
+          <p>Das Leben bringt Veränderungen mit sich, und manchmal braucht es Unterstützung, um den Alltag weiterhin selbstbestimmt zu gestalten. Ob für Sie selbst oder Ihre Liebsten, wir stehen an Ihrer Seite.</p>
+          <p>Lassen Sie uns gemeinsam die beste Lösung für Ihre Situation finden. Kontaktieren Sie uns, wir hören zu und helfen weiter!</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--white" data-lw-section="home24_title">
+      <div class="wrap">
+        <h2 data-lw-field="home24.title" data-lw-type="richtext">24h Pflege in der eigenen Häuslichkeit</h2>
+      </div>
+    </section>
+    <section class="section section--white section--tight" data-lw-section="home24">
       <div class="wrap split split--flip">
         <div>
-          <h2 data-lw-field="home24.title" data-lw-type="richtext">24h Pflege in der eigenen Häuslichkeit</h2>
-          <p data-lw-field="home24.copy" data-lw-type="textarea">Wenn der Pflegebedarf wächst, steht oft eine große Frage im Raum: Muss ich mein Zuhause verlassen? Die Antwort lautet: Nein. Unsere sorgfältig ausgewählten Betreuungskräfte ziehen für die Dauer der Pflegezeit bei Ihnen ein. Medizinische Pflege übernimmt unser ambulanter Dienst. Einzige Voraussetzung: ein separater Schlafplatz für die Betreuungskraft.</p>
-          <a class="button" href="pflege-zuhause.html" data-lw-page-ref="bs-pflege-pflege-zuhause-v1">Unterstützung ansehen</a>
+          <div class="prose" data-lw-field="home24.copy" data-lw-type="html">
+            <p>Wenn der Pflegebedarf wächst, steht oft eine große Frage im Raum: Muss ich mein Zuhause verlassen? Die Antwort lautet: Nein.</p>
+            <p>Denn mit unserer 24-Stunden-Pflege ermöglichen wir es pflegebedürftigen Menschen, in ihrer gewohnten Umgebung zu bleiben: sicher, liebevoll betreut und rund um die Uhr umsorgt.</p>
+            <p>Wir kommen zu Ihnen und bleiben. Unsere sorgfältig ausgewählten Betreuungskräfte ziehen für die Dauer der Pflegezeit bei Ihnen ein. Sie helfen im Alltag, übernehmen hauswirtschaftliche Aufgaben und schenken Nähe, Zuhören und echte Fürsorge. Ob Kochen, Waschen, Begleitung bei Terminen oder einfach da sein. Wir sind mit Herz bei Ihnen.</p>
+            <p>Und wenn medizinische Pflege gebraucht wird? Dann kommt unser ambulanter Pflegedienst regelmäßig ins Haus. So entsteht ein starkes Team aus herzlicher Alltagsbegleitung und professioneller Pflege. Ganz auf Ihre Bedürfnisse abgestimmt.</p>
+            <p>Einzige Voraussetzung: Für unsere Betreuungskraft sollte ein separater Schlafplatz zur Verfügung stehen. Alles andere organisieren wir gemeinsam mit Ihnen.</p>
+          </div>
+          <p><a class="button" href="pflege-zuhause.html" data-lw-page-ref="bs-pflege-pflege-zuhause-v1">Unterstützung ansehen</a></p>
+          <h3 data-lw-field="home24.benefits_title" data-lw-type="text">Die Vorteile auf einen Blick:</h3>
+          <ul class="checklist" data-lw-repeater="home24.items">
+            <li data-lw-item-key="home" data-lw-field="home24.item" data-lw-type="text">Vertraute Umgebung bleibt</li>
+            <li data-lw-item-key="move" data-lw-field="home24.item" data-lw-type="text">Keine Umstellung, kein Umzug</li>
+            <li data-lw-item-key="people" data-lw-field="home24.item" data-lw-type="text">Feste Bezugspersonen sorgen für Sicherheit und Vertrauen</li>
+            <li data-lw-item-key="select" data-lw-field="home24.item" data-lw-type="text">Persönlich ausgewählte Betreuungskräfte</li>
+            <li data-lw-item-key="plan" data-lw-field="home24.item" data-lw-type="text">Individuelle Beratung, Planung und Vermittlung durch uns</li>
+          </ul>
         </div>
         <div class="media-frame"><img data-lw-field="home24.image" data-lw-type="image" src="assets/cover-service-24h.webp" alt="Betreuungskraft und Seniorin im vertrauten Zuhause"></div>
       </div>
     </section>
-    <section class="section section--photo" style="background-image:url('assets/cover-page-hero.webp')" data-lw-section="cta">
+    <section class="section section--band" data-lw-section="day_support">
+      <div class="wrap">
+        <h2 data-lw-field="day_support.title" data-lw-type="richtext">Bald verfügbar: Tagespflege in Karlsruhe Mühlburg</h2>
+        <p><a class="button button--ghost" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1" data-lw-field="day_support.cta" data-lw-type="page_reference">Möchten Sie mehr erfahren?</a></p>
+        <ul class="checklist" data-lw-repeater="day_support.items">
+          <li data-lw-item-key="hours" data-lw-field="day_support.item" data-lw-type="text">Mo- Fr / 8:00 Uhr bis 16:00 Uhr</li>
+          <li data-lw-item-key="meals" data-lw-field="day_support.item" data-lw-type="text">Inkl. Mahlzeiten Früh Mittag Nachmittag und Kaffee Kuchen</li>
+          <li data-lw-item-key="transport" data-lw-field="day_support.item" data-lw-type="text">Transport hin und zurück</li>
+          <li data-lw-item-key="activity" data-lw-field="day_support.item" data-lw-type="text">Unterhaltung: Aktivierung und Mobilisierung durch Spiel und Spaß</li>
+          <li data-lw-item-key="medical" data-lw-field="day_support.item" data-lw-type="text">Medizinische Versorgung selbstverständlich mitinbegriffen.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--photo section--home-contact" style="background-image:url('assets/cover-home-contact.webp')" data-lw-section="cta">
       <div class="wrap" style="position:relative">
         <div class="panel panel--taupe reveal">
-          <h2 data-lw-field="cta.title" data-lw-type="richtext">Wir beraten Sie gerne</h2>
-          <p data-lw-field="cta.copy" data-lw-type="textarea">Schreiben Sie uns. Wir hören zu und finden gemeinsam die passende Lösung.</p>
-          <a class="button button--ghost" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1" data-lw-field="cta.button" data-lw-type="page_reference">Kontakt</a>
+          <h2 data-lw-field="cta.title" data-lw-type="richtext">Kontaktformular</h2>
+          <p data-lw-field="cta.copy" data-lw-type="textarea">Wir freuen uns auf Ihre Kontaktanfrage.</p>
+          <a class="button" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1" data-lw-field="cta.button" data-lw-type="page_reference">Kontakt</a>
         </div>
       </div>
     </section>
@@ -129,8 +208,10 @@
       <div>
         <h2 data-lw-global="footer.hours_title" data-lw-type="text">Öffnungszeiten</h2>
         <ul>
-          <li data-lw-global="footer.hours_weekdays" data-lw-type="text">Montag–Freitag: 09:00–16:00 Uhr</li>
-          <li data-lw-global="footer.hours_weekend" data-lw-type="text">Samstag-Sonntag: geschlossen</li>
+          <li data-lw-global="footer.hours_weekdays" data-lw-type="text">Montag–Freitag:</li>
+          <li data-lw-global="footer.hours_weekdays_time" data-lw-type="text">09:00–16:00 Uhr</li>
+          <li data-lw-global="footer.hours_weekend" data-lw-type="text">Samstag-Sonntag:</li>
+          <li data-lw-global="footer.hours_weekend_time" data-lw-type="text">geschlossen</li>
         </ul>
       </div>
       <nav aria-label="Menü">

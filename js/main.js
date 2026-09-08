@@ -16,14 +16,31 @@ const navLinks = document.querySelector(".nav-links");
 const setNavOpen = (open) => {
   document.body.classList.toggle("nav-open", open);
   navToggle?.setAttribute("aria-expanded", open ? "true" : "false");
+  if (!open) {
+    navLinks?.querySelectorAll(".nav-item--sub.is-open").forEach((item) => item.classList.remove("is-open"));
+  }
 };
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     setNavOpen(!document.body.classList.contains("nav-open"));
   });
 }
-navLinks?.querySelectorAll("a").forEach((link) => {
+navLinks?.querySelectorAll(":scope > a, .nav-sub a").forEach((link) => {
   link.addEventListener("click", () => setNavOpen(false));
+});
+navLinks?.querySelectorAll(".nav-item--sub > a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!tabletNavMq.matches) return;
+    const item = link.closest(".nav-item--sub");
+    if (!item) return;
+    if (!item.classList.contains("is-open")) {
+      event.preventDefault();
+      navLinks.querySelectorAll(".nav-item--sub.is-open").forEach((openItem) => {
+        if (openItem !== item) openItem.classList.remove("is-open");
+      });
+      item.classList.add("is-open");
+    }
+  });
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setNavOpen(false);
