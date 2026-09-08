@@ -1,6 +1,8 @@
 const root = document.documentElement;
 root.classList.add("js");
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mobileMq = window.matchMedia("(max-width: 767px)");
+const tabletNavMq = window.matchMedia("(max-width: 1024px)");
 
 const header = document.querySelector(".site-header");
 if (header) {
@@ -10,13 +12,27 @@ if (header) {
 }
 
 const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const setNavOpen = (open) => {
+  document.body.classList.toggle("nav-open", open);
+  navToggle?.setAttribute("aria-expanded", open ? "true" : "false");
+};
 if (navToggle) {
   navToggle.addEventListener("click", () => {
-    document.body.classList.toggle("nav-open");
-    const open = document.body.classList.contains("nav-open");
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    setNavOpen(!document.body.classList.contains("nav-open"));
   });
 }
+navLinks?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setNavOpen(false));
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setNavOpen(false);
+});
+const onNavBreakpoint = () => {
+  if (!tabletNavMq.matches) setNavOpen(false);
+};
+tabletNavMq.addEventListener?.("change", onNavBreakpoint);
+window.addEventListener("resize", onNavBreakpoint);
 
 const slider = document.querySelector("[data-hero-slider]");
 if (slider) {
@@ -96,15 +112,48 @@ if (form && !form.closest(".leadwerk-wpforms")) {
   });
 }
 
+const markAnim = (element, name, delay, slow) => {
+  if (!element || element.classList.contains("anim") || element.closest(".site-header, .site-footer, .hero-slider")) return;
+  element.classList.add("anim");
+  if (!element.getAttribute("data-anim")) element.setAttribute("data-anim", name);
+  if (delay && !element.hasAttribute("data-anim-delay")) element.setAttribute("data-anim-delay", String(delay));
+  if (slow) element.setAttribute("data-anim-slow", "");
+};
+
+document.querySelectorAll(".split").forEach((split) => {
+  [...split.children].forEach((child) => {
+    const media = child.classList.contains("media-frame") || child.querySelector(":scope > img");
+    markAnim(child, media ? "fadeInRight" : "fadeInLeft");
+  });
+});
+
+document.querySelectorAll(".feature-grid, .person-grid, .job-openings, .quote-grid").forEach((grid) => {
+  const zoom = grid.classList.contains("person-grid") || grid.classList.contains("quote-grid");
+  [...grid.children].forEach((child, index) => {
+    markAnim(child, zoom ? "zoomIn" : "fadeIn", index * 200, zoom);
+  });
+});
+
+document.querySelectorAll(".faq details, .opening, .feature, .contact-card, form.form, .prose").forEach((element, index) => {
+  const name = element.classList.contains("contact-card") ? "fadeInRight" : "fadeIn";
+  markAnim(element, name, Math.min(index * 80, 400));
+});
+
+document.querySelectorAll(".section h2, .intro-hero h1").forEach((heading) => {
+  if (heading.closest(".anim")) return;
+  markAnim(heading, "fadeIn", 200);
+});
+
 if ("IntersectionObserver" in window) {
   const reveal = new IntersectionObserver((entries, observer) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
       const delay = Number(entry.target.getAttribute("data-anim-delay") || 0);
-      window.setTimeout(() => entry.target.classList.add("is-visible"), delay);
+      if (delay) entry.target.style.animationDelay = `${delay}ms`;
+      entry.target.classList.add("is-visible");
       observer.unobserve(entry.target);
     }
-  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+  }, { rootMargin: "0px 0px 0px 0px", threshold: 0 });
   document.querySelectorAll(".anim, .reveal").forEach((element) => reveal.observe(element));
 } else {
   document.querySelectorAll(".anim, .reveal").forEach((element) => element.classList.add("is-visible"));
@@ -114,7 +163,7 @@ const fxSection = document.querySelector("[data-mouse-fx]");
 if (fxSection && !reduce) {
   const layer = fxSection.querySelector(".welcome-fx");
   fxSection.addEventListener("mousemove", (event) => {
-    if (!layer) return;
+    if (!layer || mobileMq.matches) return;
     const box = fxSection.getBoundingClientRect();
     const x = ((event.clientX - box.left) / box.width - 0.5) * 48;
     const y = ((event.clientY - box.top) / box.height - 0.5) * 28;
@@ -125,6 +174,10 @@ if (fxSection && !reduce) {
 const tiles = document.querySelector("[data-scroll-shift]");
 if (tiles && !reduce) {
   const shift = () => {
+    if (mobileMq.matches) {
+      tiles.style.transform = "";
+      return;
+    }
     const box = tiles.getBoundingClientRect();
     const view = window.innerHeight || 1;
     const progress = (view - box.top) / (view + box.height);
