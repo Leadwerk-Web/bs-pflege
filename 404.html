@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script type="module" src="js/main.js"></script>
 </head>
-<body>
+<body class="utility-page utility-page--404">
   <a class="skip-link" href="#content">Zum Inhalt</a>
   <header class="site-header">
     <nav class="wrap nav" aria-label="Hauptnavigation">
@@ -41,13 +41,19 @@
       <div class="site-language-switcher" data-lw-language-switcher-slot hidden></div>
     </nav>
   </header>
-  <main id="content">
-    <section class="section section--cream" data-lw-section="notfound">
-      <div class="wrap prose">
-        <p class="eyebrow" data-lw-field="notfound.eyebrow" data-lw-type="text">404 · Seite nicht gefunden</p>
-        <h1 data-lw-field="notfound.title" data-lw-type="richtext">Diese Seite gibt es nicht.</h1>
-        <p class="lead" data-lw-field="notfound.copy" data-lw-type="textarea">Der Link ist veraltet oder die Adresse wurde falsch eingegeben. Über die Startseite oder den Kontakt finden Sie schnell zurück.</p>
-        <p><a class="button" href="index.html" data-lw-page-ref="bs-pflege-home-v1">Zur Startseite</a> <a class="button button--ghost-dark" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1">Kontakt</a></p>
+  <main id="content" class="utility-main">
+    <section class="utility-stage" data-lw-section="notfound">
+      <div class="wrap utility-card">
+        <div class="utility-mark" aria-hidden="true"><span>404</span></div>
+        <div class="utility-copy">
+          <p class="eyebrow" data-lw-field="notfound.eyebrow" data-lw-type="text">Seite nicht gefunden</p>
+          <h1 data-lw-field="notfound.title" data-lw-type="richtext">Diese Seite gibt es nicht.</h1>
+          <p class="lead" data-lw-field="notfound.copy" data-lw-type="textarea">Der Link ist veraltet oder die Adresse wurde falsch eingegeben. Über die Startseite oder den Kontakt finden Sie schnell zurück.</p>
+          <div class="actions">
+            <a class="button" href="index.html" data-lw-page-ref="bs-pflege-home-v1"><span data-lw-field="notfound.home_label" data-lw-type="text">Zur Startseite</span></a>
+            <a class="button button--ghost-dark" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1"><span data-lw-field="notfound.contact_label" data-lw-type="text">Kontakt</span></a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

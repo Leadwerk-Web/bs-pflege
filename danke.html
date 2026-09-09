@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script type="module" src="js/main.js"></script>
 </head>
-<body>
+<body class="utility-page utility-page--thanks">
   <a class="skip-link" href="#content">Zum Inhalt</a>
   <header class="site-header">
     <nav class="wrap nav" aria-label="Hauptnavigation">
@@ -41,12 +41,19 @@
       <div class="site-language-switcher" data-lw-language-switcher-slot hidden></div>
     </nav>
   </header>
-  <main id="content">
-    <section class="section section--cream" data-lw-section="thanks">
-      <div class="wrap prose">
-        <h1 data-lw-field="thanks.title" data-lw-type="richtext">Vielen Dank für Ihre Nachricht.</h1>
-        <p class="lead" data-lw-field="thanks.copy" data-lw-type="textarea">Wir haben Ihre Nachricht erhalten und melden uns zeitnah. Unser Team in Karlsruhe freut sich darauf, Ihr Anliegen mit Ihnen zu klären.</p>
-        <div class="actions"><a class="button" href="index.html" data-lw-page-ref="bs-pflege-home-v1">Zur Startseite</a><a class="button button--ghost-dark" href="leistungen.html" data-lw-page-ref="bs-pflege-leistungen-v1">Leistungen ansehen</a></div>
+  <main id="content" class="utility-main">
+    <section class="utility-stage" data-lw-section="thanks">
+      <div class="wrap utility-card">
+        <div class="utility-mark utility-mark--success" aria-hidden="true"><span>✓</span></div>
+        <div class="utility-copy">
+          <p class="eyebrow" data-lw-field="thanks.eyebrow" data-lw-type="text">Nachricht angekommen</p>
+          <h1 data-lw-field="thanks.title" data-lw-type="richtext">Vielen Dank für Ihre Nachricht.</h1>
+          <p class="lead" data-lw-field="thanks.copy" data-lw-type="textarea">Wir haben Ihre Nachricht erhalten und melden uns zeitnah. Unser Team in Karlsruhe freut sich darauf, Ihr Anliegen mit Ihnen zu klären.</p>
+          <div class="actions">
+            <a class="button" href="index.html" data-lw-page-ref="bs-pflege-home-v1"><span data-lw-field="thanks.home_label" data-lw-type="text">Zur Startseite</span></a>
+            <a class="button button--ghost-dark" href="leistungen.html" data-lw-page-ref="bs-pflege-leistungen-v1"><span data-lw-field="thanks.services_label" data-lw-type="text">Leistungen ansehen</span></a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
