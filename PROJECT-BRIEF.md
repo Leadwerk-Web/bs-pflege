@@ -4,7 +4,7 @@
 
 - Projektname: BS Ambulanter Pflegedienst Karlsruhe
 - Sichtbare Marke: BS Ambulanter Pflegedienst
-- Offizieller Name: BS Ambulanter Pflegedienst UG (Britta Schmid)
+- Offizieller Name: BS Ambulanter Pflegedienst GmbH (Britta Schmid)
 - Nutzenversprechen: Individuelle Pflege mit Herz und Sachverstand, alle Leistungen unter einem Dach
 - Primäres Ziel: Anfragen zu Pflege, Wohngemeinschaft, Verhinderungspflege und 24h-Betreuung
 - Zielgruppe: Pflegebedürftige Menschen und Angehörige in Karlsruhe
