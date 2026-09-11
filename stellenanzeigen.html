@@ -66,17 +66,17 @@
           <article class="opening" data-lw-item-key="nurse">
             <img src="assets/icon-pflege.webp" alt="" width="72" height="72" data-lw-decorative="true">
             <h3 data-lw-field="openings.title_item" data-lw-type="text">Pflegefachkraft (m/w/d)</h3>
-            <a class="button" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1">Mehr</a>
+            <a class="button" href="#bewerbung">Jetzt bewerben</a>
           </article>
           <article class="opening" data-lw-item-key="presence">
             <img src="assets/icon-pflege.webp" alt="" width="72" height="72" data-lw-decorative="true">
             <h3 data-lw-field="openings.title_item" data-lw-type="text">Präsenzkraft / Hauswirtschaftler*in (m/w/d)</h3>
-            <a class="button" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1">Mehr</a>
+            <a class="button" href="#bewerbung">Jetzt bewerben</a>
           </article>
           <article class="opening" data-lw-item-key="initiative">
             <img src="assets/icon-administration.webp" alt="" width="72" height="72" data-lw-decorative="true">
             <h3 data-lw-field="openings.title_item" data-lw-type="text">Initiativbewerbung</h3>
-            <a class="button" href="kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1">Mehr</a>
+            <a class="button" href="#bewerbung">Jetzt bewerben</a>
           </article>
         </div>
       </div>
@@ -96,12 +96,43 @@
         </div>
       </div>
     </section>
+    <section class="section section--white" id="bewerbung" data-lw-section="application">
+      <div class="wrap form-layout">
+        <div>
+          <h2 data-lw-field="application.title" data-lw-type="text">Online bewerben</h2>
+          <p class="lead" data-lw-field="application.copy" data-lw-type="textarea">Ein Lebenslauf genügt. Wir melden uns innerhalb weniger Tage bei Ihnen und laden Sie zu einem Kennenlerngespräch ein.</p>
+          <form id="bewerbung-form" class="form" data-lw-wpforms="application" action="danke.html" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+              <label>Vorname<input type="text" name="first_name" autocomplete="given-name" required></label>
+              <label>Nachname<input type="text" name="last_name" autocomplete="family-name" required></label>
+            </div>
+            <label>E-Mail-Adresse<input type="email" name="email" autocomplete="email" required></label>
+            <label>Telefonnummer<input type="tel" name="phone" autocomplete="tel" required></label>
+            <label>Gewünschte Stelle<select name="position" required>
+              <option value="pflegefachkraft">Pflegefachkraft (m/w/d)</option>
+              <option value="praesenzkraft">Präsenzkraft / Hauswirtschaftler*in (m/w/d)</option>
+              <option value="initiativ">Initiativbewerbung</option>
+            </select></label>
+            <label>Lebenslauf (PDF)<input type="file" name="cv" accept=".pdf,.doc,.docx"></label>
+            <label>Nachricht<textarea name="message" rows="5"></textarea></label>
+            <label class="form-consent"><input type="checkbox" name="consent" value="accepted" required><span>Ich habe die <a href="datenschutz.html" data-lw-page-ref="bs-pflege-datenschutz-v1">Datenschutzerklärung</a> gelesen.</span></label>
+            <button class="button" type="submit">Bewerbung absenden</button>
+          </form>
+        </div>
+        <aside class="contact-card" data-lw-section="application_contact">
+          <h2 data-lw-field="application_contact.title" data-lw-type="text">Lieber persönlich?</h2>
+          <p data-lw-field="application_contact.copy" data-lw-type="textarea">Rufen Sie uns an oder schreiben Sie eine kurze Mail. Wir freuen uns auf das Gespräch.</p>
+          <p><a data-lw-field="application_contact.phone" data-lw-type="text" href="tel:+497218933330">+49 721 8933330</a></p>
+          <p><a data-lw-field="application_contact.email" data-lw-type="email" href="mailto:info@bs-pflege-ka.de">info@bs-pflege-ka.de</a></p>
+        </aside>
+      </div>
+    </section>
     <section class="section section--photo" style="background-image:url('assets/cover-page-hero.webp')" data-lw-section="cta">
       <div class="wrap" style="position:relative">
         <div class="panel panel--taupe reveal">
           <h2 data-lw-field="cta.title" data-lw-type="richtext">Jetzt bewerben</h2>
           <p data-lw-field="cta.copy" data-lw-type="textarea">Wir freuen uns auf Ihre Kontaktanfrage.</p>
-          <a class="button button--ghost" href="./kontakt.html" data-lw-page-ref="bs-pflege-kontakt-v1" data-lw-field="cta.button" data-lw-type="page_reference">Kontakt</a>
+          <a class="button button--ghost" href="#bewerbung">Zum Bewerbungsformular</a>
         </div>
       </div>
     </section>
